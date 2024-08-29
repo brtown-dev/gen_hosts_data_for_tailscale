@@ -37,7 +37,7 @@ fd7a:115c:a1e0:b1a:0:c:a00:406c jp012
 
 「全サイトの１号IPカメラ(10.0.64.151/24)でホスト名を「jpxxx-**camera1**」と設定したい場合は以下のようにスクリプトを実行。
 ```
-% python main.py --ip 10.0.64.151/24 --suffix "camera1"
+% python gen_hosts.py  --ip 10.0.64.151/24 --suffix "camera1"
 fd7a:115c:a1e0:b1a:0:1:a00:4097 jp001-camera1
 fd7a:115c:a1e0:b1a:0:5:a00:4097 jp005-camera1
 fd7a:115c:a1e0:b1a:0:6:a00:4097 jp006-camera1
