@@ -9,7 +9,7 @@
 
 ### 使い方
 ```
-usage: main.py [-h] [-s HOSTNAME_SUFFIX] [-u TARGET_USER] [-i TARGET_IP]
+usage: gen_hosts.py [-h] [-s HOSTNAME_SUFFIX] [-u TARGET_USER] [-i TARGET_IP]
 
 options:
   -h, --help            show this help message and exit
