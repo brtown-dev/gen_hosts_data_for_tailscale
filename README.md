@@ -7,6 +7,9 @@
 3. "tailscale debug"でそのsite-idに所属する特定のローカルIPアドレス(10.0.64.108等)のtailscale ipv6アドレスを抽出。
 4. 抽出したtailscale ipv6アドレスとホスト名をhostsファイルのフォーマットに合わせて表示
 
+例外1: JP010-2(10.0.65.108)は出力しません。tailscale debugコマンドで情報抽出し、手動でhostsに追加してください。
+例外2: JP043は、Tailscaleネットワークを切り替えて出力してください。
+
 ### 使い方
 ```
 usage: gen_hosts.py [-h] [-s HOSTNAME_SUFFIX] [-u TARGET_USER] [-i TARGET_IP]
