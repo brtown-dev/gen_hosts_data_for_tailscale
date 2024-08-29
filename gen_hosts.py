@@ -3,7 +3,6 @@ import argparse
 import platform
 import subprocess
 import re
-from pprint import pprint as p
 
 __author__ = "Your Name"
 __version__ = "0.1.0"
