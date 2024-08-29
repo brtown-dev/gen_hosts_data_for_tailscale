@@ -18,3 +18,35 @@ options:
   -i TARGET_IP, --ip TARGET_IP
 ```
 
+Option無しで実行すると、今接続しているTailscaleネットワークに所属するホストの内、「os-node@」でログインしているホスト(jpxxx-via-x)が所属しているネットワークの「10.0.64.108/24」のホストのipV6アドレスを表示。ホスト名は「jpxxx-via-x」から「-via-x」を除いた「jpxxx」で表示。
+```
+% python gen_hosts.py      
+fd7a:115c:a1e0:b1a:0:1:a00:406c jp001
+fd7a:115c:a1e0:b1a:0:5:a00:406c jp005
+fd7a:115c:a1e0:b1a:0:6:a00:406c jp006
+fd7a:115c:a1e0:b1a:0:7:a00:406c jp007
+fd7a:115c:a1e0:b1a:0:8:a00:406c jp008
+fd7a:115c:a1e0:b1a:0:9:a00:406c jp009
+fd7a:115c:a1e0:b1a:0:a:a00:406c jp010-1
+fd7a:115c:a1e0:b1a:0:b:a00:406c jp011
+fd7a:115c:a1e0:b1a:0:c:a00:406c jp012
+:
+:
+:
+```
+
+「全サイトの１号IPカメラ(10.0.64.151/24)でホスト名を「jpxxx-**camera1**」と設定したい場合は以下のようにスクリプトを実行。
+```
+% python main.py --ip 10.0.64.151/24 --suffix "camera1"
+fd7a:115c:a1e0:b1a:0:1:a00:4097 jp001-camera1
+fd7a:115c:a1e0:b1a:0:5:a00:4097 jp005-camera1
+fd7a:115c:a1e0:b1a:0:6:a00:4097 jp006-camera1
+fd7a:115c:a1e0:b1a:0:7:a00:4097 jp007-camera1
+fd7a:115c:a1e0:b1a:0:8:a00:4097 jp008-camera1
+fd7a:115c:a1e0:b1a:0:9:a00:4097 jp009-camera1
+fd7a:115c:a1e0:b1a:0:a:a00:4097 jp010-1-camera1
+fd7a:115c:a1e0:b1a:0:b:a00:4097 jp011-camera1
+:
+:
+:
+```
